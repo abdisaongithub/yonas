@@ -20,6 +20,8 @@ Clone the project
   git clone https://github.com/abdisaongithub/yonas.git
 ```
 
+Activate your virtual invironment
+
 Go to the project directory
 
 ```bash
