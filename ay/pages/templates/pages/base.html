@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +42,7 @@
   <!-- end loader -->
   <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a class="active" href="index.html">Home</a>
+    <a class="active" href="index.html">{% trans 'Home' %}</a>
     <a href="about.html">About</a>
     <a href="service.html">Searvices</a>
     <a href="testimonial.html">Testimonial</a>
@@ -63,8 +64,22 @@
             </li>
             <li> <a href="https://goo.gl/maps/oHDNZ9dtM6bcvqbR7" target="_blank"> <i class="fa fa-map-marker"
                   aria-hidden="true"></i> Location</a></li>
-            <li> <a href="https://t.me/abd_dba" target="_blank"> <i class="fa fa-telegram" aria-hidden="true"></i>Join
-                Us On Telegram</a></li>
+            <li> <a href="https://t.me/abd_dba" target="_blank"> <i class="fa fa-telegram" aria-hidden="true">
+              </i>Join Us On Telegram</a></li>
+            <li>
+              <a href="#" >
+                  <div style="">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <select>
+                      <option value="en" selected>English</option>
+                      <option value="om">Afaan Oromoo</option>
+                      <option value="amh">Amharic</option>
+                      <option value="ti">Tigrigna</option>
+                    </select>
+                  </div>
+                </i>
+                </a>
+            </li>
           </ul>
         </div>
         <div class="col-xl-2 col-md-9 col-sm-9">
@@ -77,156 +92,11 @@
     </div>
   </header>
   <!-- end header inner -->
+  {% block content %}
+
+  {% endblock content %}
+
   <!-- banner -->
-  <div class="full_bg">
-    <div class="container_width">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="ser_img">
-            <figure><img style="width: 500px; margin-top: 80px;" src="{% static 'pages/images/driver.png' %}" alt="#" /></figure>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <!-- carousel code -->
-          <div id="banner1" class="carousel slide slider_main">
-            <ol class="carousel-indicators">
-              <li data-target="#banner1" data-slide-to="0" class="active">q</li>
-              <li data-target="#banner1" data-slide-to="1">q</li>
-              <li data-target="#banner1" data-slide-to="2">q</li>
-            </ol>
-            <div class="carousel-inner">
-              <!-- first slide -->
-              <div class="carousel-item active">
-                <div class="container">
-                  <div class="carousel-caption relative">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="creative">
-                          <div class="auto_text">
-                            <h1>AY<br>Driving Center</h1>
-                            <!--                                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum </p>-->
-                            <a class="read_more" href="javascript:void(0)">Contact Us</a>
-                            <a class="read_more" href="javascript:void(0)">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- second slide -->
-              <!-- <div class="carousel-item">
-                <div class="container">
-                  <div class="carousel-caption relative">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="creative">
-                          <div class="auto_text">
-                            <h1>AUTO <br>SERVICES</h1>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of
-                              a page when looking at its layout. The point of using Lorem Ipsum </p>
-                            <a class="read_more" href="javascript:void(0)">Contact Us</a>
-                            <a class="read_more" href="javascript:void(0)">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- third slide-->
-              <!--
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="carousel-caption relative">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="creative">
-                          <div class="auto_text">
-                            <h1>AUTO <br>SERVICES</h1>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of
-                              a page when looking at its layout. The point of using Lorem Ipsum </p>
-                            <a class="read_more" href="javascript:void(0)">Contact Us</a>
-                            <a class="read_more" href="javascript:void(0)">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              -->
-            </div>
-            <!-- controls -->
-            <!-- <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              <span class="sr-only">Next</span>
-            </a> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end banner -->
-  <!-- services -->
-  <div class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="titlepage text_align_left">
-            <h2><img src="{% static 'pages/images/driving_wheel.png' %}" style="width: 80px;" alt="#" />What We Teach</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div id="ho_heal" class="our_class text_align_center">
-            <i class="d_no"><img src="{% static 'pages/images/suv.png' %}" alt="#" /></i>
-            <i class="d_bo"><img src="{% static 'pages/images/suv.png' %}" alt="#" /></i>
-            <h3>AUTO</h3>
-            <strong>Requirements</strong>
-            <p>
-              - ID (Kebele/Passport ...)
-              <br>
-              - 10th Grade Certificate
-            </p>
-            <a class="read_more" href="javascript:void(0)">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mar_top90">
-          <div id="ho_heal" class="our_class text_align_center">
-            <i class="d_no"><img src="{% static 'pages/images/public_1.png' %}" alt="#" /></i>
-            <i class="d_bo"><img src="{% static 'pages/images/public_1.png' %}" alt="#" /></i>
-            <h3>PUBLIC - 1</h3>
-            <strong>Requirements</strong>
-            <p>
-              - ID (Kebele/Passport ...)
-              <br>
-              - 10th Grade Certificate
-            </p><a class="read_more" href="javascript:void(0)">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div id="ho_heal" class="our_class text_align_center">
-            <i class="d_no"><img src="{% static 'pages/images/cargo_1.png' %}" alt="#" /></i>
-            <i class="d_bo"><img src="{% static 'pages/images/cargo_1.png' %}" alt="#" /></i>
-            <h3>CARGO - 1</h3>
-            <strong>Requirements</strong>
-            <p>
-              - ID (Kebele/Passport ...)
-              <br>
-              - 10th Grade Certificate
-            </p><a class="read_more" href="javascript:void(0)">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end services -->
 
   <!-- choose -->
   <!-- <div class="choose">
@@ -262,176 +132,7 @@
       </div> -->
   <!-- end choose -->
   <!-- customers -->
-  <div class="customers">
-    <div class="clients_bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="titlepage text_align_center">
-              <h2>
-                <!-- <img src="images/heading.png" alt="#"/> -->
-                Our Customers Says
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- start slider section -->
-    <div id="myCarousel" class="carousel slide clients_banner" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="carousel-caption tetxs">
-              <div class="row d_flex">
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint2.png' %}" alt="#" /></i>
-                      <h4>Sofi den 1</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint1.png' %}" alt="#" /></i>
-                      <h4>Jony Mental 2</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="carousel-caption tetxs">
-              <div class="row d_flex">
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint2.png' %}" alt="#" /></i>
-                      <h4>Sofi den 3</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint1.png' %}" alt="#" /></i>
-                      <h4>Jony Mental 4</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="carousel-caption tetxs">
-              <div class="row d_flex">
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint2.png' %}" alt="#" /></i>
-                      <h4>Sofi den 5</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint1.png' %}" alt="#" /></i>
-                      <h4>Jony Mental 6</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <i class="fa fa-angle-left" aria-hidden="true"></i>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <i class="fa fa-angle-right" aria-hidden="true"></i>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-  <!-- end customers -->
-  <!-- contact -->
-  <div class="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 ">
-          <div class="titlepage">
-            <h2><i class="fa fa-phone" style="margin-right: 10px; color: green;" alt="#"></i> Contact Us</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row d_flex">
-        <div class="col-md-6">
-          <form id="request" class="main_form">
-            <div class="row">
-              <div class="col-md-12">
-                <input class="form_control" placeholder="Name" type="type" name=" Name">
-              </div>
-              <div class="col-md-12">
-                <input class="form_control" placeholder="Phone number" type="type" name="Phone Number">
-              </div>
-              <div class="col-md-12">
-                <input class="form_cont" placeholder="Message" type="type" name="message">
-              </div>
-              <div class="col-md-12">
-                <button class="send_btn">Send</button>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div class="cont_img">
-            <figure><img src="{% static 'pages/images/contact.png' %}" alt="#" /></figure>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end contact -->
 
-  <div class="container-fliud">
-    <div class="row">
-      <div class="col-md-12 padd0">
-        <div class="map-responsive">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1439.1579294889866!2d38.6903479738304!3d8.951314078242557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2set!4v1650882878317!5m2!1sen!2set"
-            width="1360" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- end footer -->
   <footer>
