@@ -42,7 +42,7 @@
   <!-- end loader -->
   <div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a class="active" href="index.html">{% trans 'Home' %}</a>
+    <a class="active" href="{% url 'home' %}">{% trans 'Home' %}</a>
     <a href="about.html">About</a>
     <a href="service.html">Searvices</a>
     <a href="testimonial.html">Testimonial</a>
@@ -55,7 +55,7 @@
       <div class="row d_flex">
         <div class=" col-md-3 col-sm-3">
           <div class="logo">
-            <a href="index.html"><img style="height: 80px;" src="{% static 'pages/images/driver.png' %}" alt="#" /></a>
+            <a href="{% url 'home' %}"><img style="height: 90px; margin-left: 30px;" src="{% static 'pages/images/logo.png' %}" alt="#" /></a>
           </div>
         </div>
         <div class="col-md-7 di_none">
