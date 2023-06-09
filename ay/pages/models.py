@@ -1,62 +1,52 @@
 from django.db import models
+from parler.models import TranslatableModel, TranslatedFields
 
 
-class Testimonial(models.Model):
-    name = models.CharField(max_length=255)
-    text = models.TextField()
-    position = models.CharField(max_length=255, null=True)
-    image = models.ImageField(upload_to='images/testimonial/')
-
-    def __str__(self):
-        return self.name
-
-
-class Requirement(models.Model):
-    requirement = models.CharField(max_length=255)
-    requirement_am = models.CharField(max_length=255, default='')
-    requirement_or = models.CharField(max_length=255, default='')
-    requirement_tg = models.CharField(max_length=255, default='')
-
-    def __str__(self):
-        return self.requirement
-
-
-class Course(models.Model):
-    requirements = models.ManyToManyField(Requirement, related_name='courses')
-    name = models.CharField(max_length=255)
-    name_or = models.CharField(max_length=255, default='')
-    name_am = models.CharField(max_length=255, default='')
-    name_tg = models.CharField(max_length=255, default='')
-
-    aka = models.CharField(max_length=255, null=True)
-    capacity = models.IntegerField(default=0)
-
-    def __str__(self):
-        return self.name
-
-
-class Contact(models.Model):
-    name = models.CharField(max_length=255)
-    phone = models.CharField(max_length=15)
-    message = models.TextField()
+class Contact(TranslatableModel):
+    translations = TranslatedFields(
+        name=models.CharField(max_length=255),
+        phone=models.CharField(max_length=15),
+        message=models.TextField(),
+    )
 
     def __str__(self):
         return str(self.name) + ' - ' + str(self.phone)
 
 
-class Blog(models.Model):
-    title = models.CharField(max_length=255)
-    content = models.TextField()
-    images = models.ImageField()
-    created_at = models.DateTimeField(auto_now_add=True)
+class Blog(TranslatableModel):
+    translations = TranslatedFields(
+        title=models.CharField(max_length=255),
+    )
 
     def __str__(self):
         return self.title
 
 
-class About(models.Model):
-    image = models.ImageField(upload_to='images/about/')
-    text = models.TextField()
+class BlogText(TranslatableModel):
+    translations = TranslatedFields(
+        blog=models.ForeignKey('pages.Blog', on_delete=models.CASCADE, blank=True, null=False),
+        text=models.TextField(),
+        order=models.IntegerField(default=0),
+    )
+
+    def __str__(self):
+        return self.text
+
+
+class BlogImage(models.Model):
+    blog = models.ForeignKey('Blog', on_delete=models.CASCADE, blank=True, null=False)
+    image = models.ImageField(upload_to='photos/blog/%Y/%m/%d')
+    order = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.blog
+
+
+class About(TranslatableModel):
+    translations = TranslatedFields(
+        image=models.ImageField(upload_to='images/about/'),
+        text=models.TextField(),
+    )
 
     def __str__(self):
         return self.text

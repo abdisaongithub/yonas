@@ -5,42 +5,42 @@
 
 <head>
 
-  <!-- basic -->
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- mobile metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-  <!-- site metas -->
-  <title>Shufer Ethiopia</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <!-- bootstrap css -->
-  <link rel="stylesheet" href="{% static 'pages/css/bootstrap.min.css' %}">
-  <!-- style css -->
-  <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
-  <!-- Responsive-->
-  <link rel="stylesheet" href="{% static 'pages/css/responsive.css' %}">
-  <!-- fevicon -->
-  <link rel="icon" href="{% static 'pages/images/fevicon.png' %}" type="image/gif" />
-  <!-- Tweaks for older IEs-->
-  <link rel="stylesheet" href="{% static 'pages/css/owl.carousel.min.css' %}">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Shufer Ethiopia</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'pages/css/bootstrap.min.css' %}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'pages/css/style.css' %}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static 'pages/css/responsive.css' %}">
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'pages/images/fevicon.png' %}" type="image/gif"/>
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="{% static 'pages/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <!-- body -->
 
 <body class="main-layout">
-  <!-- loader  -->
-  <!-- <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
-      </div> -->
-  <!-- end loader -->
-  <div id="mySidepanel" class="sidepanel">
+<!-- loader  -->
+<!-- <div class="loader_bg">
+       <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+    </div> -->
+<!-- end loader -->
+<div id="mySidepanel" class="sidepanel">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a class="active" href="{% url 'home' %}">{% trans 'Home' %}</a>
     <a href="about.html">About</a>
@@ -48,138 +48,165 @@
     <a href="testimonial.html">Testimonial</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
-  </div>
-  <!-- header -->
-  <header class="header-area">
+</div>
+<!-- header -->
+<header class="header-area">
     <div class="container-fluid">
-      <div class="row d_flex">
-        <div class=" col-md-3 col-sm-3">
-          <div class="logo">
-            <a href="{% url 'home' %}"><img style="height: 90px; margin-left: 30px;" src="{% static 'pages/images/logo.png' %}" alt="#" /></a>
-          </div>
-        </div>
-        <div class="col-md-7 di_none">
-          <ul class="Informa_conta">
-            <li> <a href="tel:+251926795815"><i class="fa fa-phone" aria-hidden="true"></i>Call Now +251 92 679 5815</a>
-            </li>
-            <li> <a href="https://goo.gl/maps/oHDNZ9dtM6bcvqbR7" target="_blank"> <i class="fa fa-map-marker"
-                  aria-hidden="true"></i> Location</a></li>
-            <li> <a href="https://t.me/abd_dba" target="_blank"> <i class="fa fa-telegram" aria-hidden="true">
-              </i>Join Us On Telegram</a></li>
-            <li>
-              <a href="#" >
-                  <div style="">
-                    <i class="fa fa-globe" aria-hidden="true"></i>
-                    <select>
-                      <option value="en" selected>English</option>
-                      <option value="om">Afaan Oromoo</option>
-                      <option value="amh">Amharic</option>
-                      <option value="ti">Tigrigna</option>
-                    </select>
-                  </div>
-                </i>
-                </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-xl-2 col-md-9 col-sm-9">
-          <ul class="email text_align_right">
-            <!-- <li><a href="javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
-            <li> <button class="openbtn" onclick="openNav()"><img src="{% static 'pages/images/menu_btn.png' %}"></button></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- end header inner -->
-  {% block content %}
-
-  {% endblock content %}
-
-  <!-- banner -->
-
-  <!-- choose -->
-  <!-- <div class="choose">
-        <div class="container">
-          <div class="row grid">
-            <div class="col-md-6 pad_left0 ">
-              <div class="readab">
-                <figure><img src="images/chose_img.png" alt="#"/></figure>
-                  <div class="play_icon">
-                    <a class="play-btn" href="javascript:void(0)"><img src="images/play_icon.png"></a>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-6 older">
-              <div class="titlepage text_align_left">
-                <h2><img src="images/heading.png" alt="#"/>WHY CHOOSE US?</h2>
-                <p>readable English. Many desktop publishing packages and web page</p>
-              </div>
-              <div class="progre">
-                <div class="row">
-                  <div class="col-md-12 ">
-                      <label>DIST (MILES)</label>
-                    <div class="slidecontainer">
-                      <p class="right100"><span id="demo"></span></p>
-                      <input type="range" min="1000" max="4000" value="50" class="slider" id="myRange" style="margin-bottom: 20px;">
-                    </div>
-                        </div>
+        <div class="row d_flex">
+            <div class=" col-md-3 col-sm-3">
+                <div class="logo">
+                    <a href="{% url 'home' %}"><img style="height: 90px; margin-left: 30px;"
+                                                    src="{% static 'pages/images/logo.png' %}" alt="#"/></a>
                 </div>
+            </div>
+            <div class="col-md-7 di_none">
+                <ul class="Informa_conta">
+                    <li><a href="tel:+251926795815"><i class="fa fa-phone" aria-hidden="true"></i>Call Now +251 92 679
+                        5815</a>
+                    </li>
+                    <li><a href="https://goo.gl/maps/oHDNZ9dtM6bcvqbR7" target="_blank"> <i class="fa fa-map-marker"
+                                                                                            aria-hidden="true"></i>
+                        Location</a></li>
+                    <li><a href="https://t.me/abd_dba" target="_blank"> <i class="fa fa-telegram" aria-hidden="true">
+                    </i>Join Us On Telegram</a></li>
+                    {#            <li>#}
+                    {#              <a href="#" >#}
+                    {#                  <div style="">#}
+                    {#                    <i class="fa fa-globe" aria-hidden="true"></i>#}
+                    {#                    <select>#}
+                    {#                      <option value="en" selected>English</option>#}
+                    {#                      <option value="om">Afaan Oromoo</option>#}
+                    {#                      <option value="amh">Amharic</option>#}
+                    {#                      <option value="ti">Tigrigna</option>#}
+                    {#                    </select>#}
+                    {#                  </div>#}
+                    {#                </i>#}
+                    {#                </a>#}
+                    {#            </li>#}
+                    <li>
+                        {% get_current_language as CURRENT_LANGUAGE %}
+                        {% get_available_languages as AVAILABLE_LANGUAGES %}
+                        {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+                        <div class="">
+                            <ul class="">
+                                {% for language in languages %}
+                                    <li>
+                                        <a href="/{{ language.code }}/"
+                                                {% if language.code == CURRENT_LANGUAGE %}
+                                           class="active"{% endif %}>
+                                            {{ language.name_local }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-2 col-md-9 col-sm-9">
+                <ul class="email text_align_right">
+                    <!-- <li><a href="javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
+                    <li>
+                        <button class="openbtn" onclick="openNav()"><img src="{% static 'pages/images/menu_btn.png' %}">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- end header inner -->
+{% block content %}
+
+{% endblock content %}
+
+<!-- banner -->
+
+<!-- choose -->
+<!-- <div class="choose">
+      <div class="container">
+        <div class="row grid">
+          <div class="col-md-6 pad_left0 ">
+            <div class="readab">
+              <figure><img src="images/chose_img.png" alt="#"/></figure>
+                <div class="play_icon">
+                  <a class="play-btn" href="javascript:void(0)"><img src="images/play_icon.png"></a>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 older">
+            <div class="titlepage text_align_left">
+              <h2><img src="images/heading.png" alt="#"/>WHY CHOOSE US?</h2>
+              <p>readable English. Many desktop publishing packages and web page</p>
+            </div>
+            <div class="progre">
+              <div class="row">
+                <div class="col-md-12 ">
+                    <label>DIST (MILES)</label>
+                  <div class="slidecontainer">
+                    <p class="right100"><span id="demo"></span></p>
+                    <input type="range" min="1000" max="4000" value="50" class="slider" id="myRange" style="margin-bottom: 20px;">
+                  </div>
+                      </div>
               </div>
             </div>
           </div>
         </div>
-      </div> -->
-  <!-- end choose -->
-  <!-- customers -->
+      </div>
+    </div> -->
+<!-- end choose -->
+<!-- customers -->
 
 
-  <!-- end footer -->
-  <footer>
+<!-- end footer -->
+<footer>
     <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="menu_footer">
-              <li><a class="active" href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="service.html">Service</a></li>
-              <li><a href="testimonial.html">Testimonial</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="contact.html">contact us</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-12 col-md-12">
-            <ul class="top_infomation" style="align-items: center;">
-              <li> <a href="tel:+251926795815"><i class="fa fa-phone" aria-hidden="true"></i>Call Now +251 92 679
-                  5815</a> </li>
-              <li> <a href="https://t.me/abd_dba" target="_blank"> <i class="fa fa-telegram" aria-hidden="true"></i>Join
-                  Us On Telegram</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
         <div class="container">
-          <div class="row ">
-            <div class="col-md-3"></div>
-            <div class="col-md-6" style="display: flex; justify-content: center;">
-              <p>2023 All Rights Reserved ©  <a href="https://miltotech.com"> Powered By Milto Technologies</a></p>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="menu_footer">
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Service</a></li>
+                        <li><a href="testimonial.html">Testimonial</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <ul class="top_infomation" style="align-items: center;">
+                        <li><a href="tel:+251926795815"><i class="fa fa-phone" aria-hidden="true"></i>Call Now +251 92
+                            679
+                            5815</a></li>
+                        <li><a href="https://t.me/abd_dba" target="_blank"> <i class="fa fa-telegram"
+                                                                               aria-hidden="true"></i>Join
+                            Us On Telegram</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-3"></div>
-          </div>
         </div>
-      </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6" style="display: flex; justify-content: center;">
+                        <p>2023 All Rights Reserved © <a href="https://miltotech.com"> Powered By Milto Technologies</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
-  <!-- end footer -->
-  <!-- Javascript files-->
-  <script src="{% static 'pages/js/jquery.min.js' %}"></script>
-  <script src="{% static 'pages/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'pages/js/jquery-3.0.0.min.js' %}"></script>
-  <script src="{% static 'pages/js/owl.carousel.min.js' %}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-  <script src="{% static 'pages/js/custom.js' %}"></script>
+</footer>
+<!-- end footer -->
+<!-- Javascript files-->
+<script src="{% static 'pages/js/jquery.min.js' %}"></script>
+<script src="{% static 'pages/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'pages/js/jquery-3.0.0.min.js' %}"></script>
+<script src="{% static 'pages/js/owl.carousel.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script src="{% static 'pages/js/custom.js' %}"></script>
 
 </body>
 
