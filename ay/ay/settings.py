@@ -27,7 +27,12 @@ SECRET_KEY = 'django-insecure-95xvly4@@2oh61http+k7w2njl%++z6f=!t^&g0k_+m-alh$9n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '192.168.1.12',
+
+]
 
 # Application definition
 
@@ -130,13 +135,13 @@ LANGUAGES = (
     ('en', gettext('English')),
     # ('es', _('Spanish')),
     # ('fr', _('French')),
-    ('om-et', gettext('Afan Oromo')),
+    ('oro', gettext('Afan Oromo')),
     ('am', gettext('Amharic')),
 )
 EXTRA_LANG_INFO = {
-    'om-et': {
+    'oro': {
         'bidi': False,
-        'code': 'om-et',
+        'code': 'oro',
         'name': 'Afan Oromo',
         'name_local': u'\u004F\u0072\u006F',
     },
@@ -154,7 +159,7 @@ django.conf.locale.LANG_INFO = LANG_INFO
 PARLER_LANGUAGES = {
     None: (
         {'code': 'en', },  # English
-        {'code': 'om-et', },  # Afan Oromo
+        {'code': 'oro', },  # Afan Oromo
         {'code': 'am', },  # Amharic
     ),
     'default': {
@@ -171,7 +176,7 @@ LOCALE_PATHS = [
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = '/home/abdi/Projects/yonas-main/ay/static'
+STATIC_ROOT = '/home/abdi/Projects/yonas/ay/static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
