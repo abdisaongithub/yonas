@@ -10,8 +10,8 @@
                 <div class="col-md-12">
                     <div class="titlepage text_align_center ">
                         <h2>
-                            <!--                        <img src="{% static 'pages/images/heading.png' %}" alt="#"/>-->
-                            From Our Latest Blogs</h2>
+{#                            <img src="{% static 'pages/images/heading.png' %}" alt="#"/>#}
+                            {{ object.title }}</h2>
                     </div>
                 </div>
             </div>
@@ -21,8 +21,8 @@
                         <figure><img alt="#" src="{% static 'pages/images/blog.jpg' %}"/></figure>
                         <h4></h4>
                         <div class="facil">
-                            <h3>Changing your oil</h3>
-                            <strong><span>Post By : Auto Repair </span><span>February 12, 2023</span></strong>
+                            <h3>{{ object.title }}</h3>
+                            <strong><span>Post By : Yonas Y. </span><span>{{ object.date }}</span></strong>
                             <h3>Changing your car's oil is one of the most important things you can do to keep it
                                 running
                                 smoothly</h3>

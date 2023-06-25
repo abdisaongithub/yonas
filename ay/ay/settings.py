@@ -138,6 +138,7 @@ LANGUAGES = (
     ('oro', gettext('Afan Oromo')),
     ('am', gettext('Amharic')),
 )
+
 EXTRA_LANG_INFO = {
     'oro': {
         'bidi': False,

@@ -1,4 +1,5 @@
 from django.views import generic
+from .models import Blog
 
 
 class HomeView(generic.ListView):
@@ -6,21 +7,16 @@ class HomeView(generic.ListView):
     queryset = {}
 
 
-class PostsView(generic.ListView):
-    template_name = 'blog/service.html'
-    queryset = {}
-
-
-class PostDetailView(generic.ListView):
-    template_name = 'blog/service.html'
-    queryset = {}
-
-
-class ServiceView(generic.ListView):
+class BlogsView(generic.ListView):
     template_name = 'pages/service.html'
     queryset = {}
 
 
-class BlogView(generic.ListView):
+class BlogDetailView(generic.DetailView):
     template_name = 'pages/blog.html'
+    model = Blog
+
+
+class ServiceView(generic.ListView):
+    template_name = 'pages/service.html'
     queryset = {}
