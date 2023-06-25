@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-19 22:15+0300\n"
-"PO-Revision-Date: 2023-06-19 19:18+0000\n"
+"POT-Creation-Date: 2023-06-19 23:20+0300\n"
+"PO-Revision-Date: 2023-06-19 20:22+0000\n"
 "Last-Translator:   <abdtsegaye@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -34,10 +34,66 @@ msgstr "አማርኛ"
 msgid "admin/"
 msgstr ""
 
-#: pages/templates/pages/base.html:45
+#: pages/templates/pages/base.html:15
+msgid "Shufer Ethiopia"
+msgstr ""
+
+#: pages/templates/pages/base.html:45 pages/templates/pages/base.html:168
 msgid "Home"
 msgstr "Mana"
+
+#: pages/templates/pages/base.html:46 pages/templates/pages/base.html:169
+msgid "About"
+msgstr ""
+
+#: pages/templates/pages/base.html:47 pages/templates/pages/base.html:170
+msgid "Services"
+msgstr ""
+
+#: pages/templates/pages/base.html:48 pages/templates/pages/base.html:171
+msgid "Posts"
+msgstr "Maxxansa"
+
+#: pages/templates/pages/base.html:49 pages/templates/pages/base.html:172
+msgid "Contact"
+msgstr "Tessoo"
+
+#: pages/templates/pages/base.html:63 pages/templates/pages/base.html:178
+msgid "Call Now"
+msgstr ""
+
+#: pages/templates/pages/base.html:69
+msgid "Location"
+msgstr ""
+
+#: pages/templates/pages/base.html:71 pages/templates/pages/base.html:185
+msgid "Join Us On Telegram"
+msgstr ""
+
+#: pages/templates/pages/base.html:196
+msgid "2023 All Rights Reserved © "
+msgstr ""
+
+#: pages/templates/pages/base.html:196
+msgid "Powered By Milto Technologies"
+msgstr ""
 
 #: pages/templates/pages/index.html:32
 msgid "Road Safety"
 msgstr "Nageenya Karaa"
+
+#: pages/templates/pages/index.html:33
+msgid "Driving Tips"
+msgstr "Haala Kontolaachisuu"
+
+#: pages/templates/pages/index.html:34
+msgid "Maintenance"
+msgstr "Suphaa"
+
+#: pages/templates/pages/index.html:36
+msgid "Contact Us"
+msgstr "Nu Dubbisaa"
+
+#: pages/templates/pages/index.html:37
+msgid "Read More"
+msgstr "Dubbisi"

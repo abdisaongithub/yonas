@@ -6,6 +6,16 @@ class HomeView(generic.ListView):
     queryset = {}
 
 
+class PostsView(generic.ListView):
+    template_name = 'blog/service.html'
+    queryset = {}
+
+
+class PostDetailView(generic.ListView):
+    template_name = 'blog/service.html'
+    queryset = {}
+
+
 class ServiceView(generic.ListView):
     template_name = 'pages/service.html'
     queryset = {}

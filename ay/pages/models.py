@@ -13,9 +13,19 @@ class Contact(TranslatableModel):
         return str(self.name) + ' - ' + str(self.phone)
 
 
+class BlogTag(TranslatableModel):
+    translations = TranslatedFields(
+        tag=models.CharField(max_length=50)
+    )
+
+    def __str__(self):
+        return self.tag
+
+
 class Blog(TranslatableModel):
     translations = TranslatedFields(
         title=models.CharField(max_length=255),
+        tags=models.ManyToManyField(BlogTag)
     )
 
     def __str__(self):
