@@ -1,10 +1,10 @@
-from django.urls import path
+from django.urls import path, include
 
-from .views import HomeView, ServiceView, BlogsView, BlogDetailView
+from .views import BlogView, home_page, blog_detail
 
 urlpatterns = [
-    path('', HomeView.as_view(), name='home'),
-    path('posts/', BlogsView.as_view(), name='posts'),
-    path('posts/<int:pk>/', BlogDetailView.as_view(), name='post_detail'),
-    path('services/', ServiceView.as_view(), name='services'),
+    path('', home_page, name='home'),
+    path('posts/', BlogView.as_view(), name='blogs'),
+    path('posts/<int:pk>', blog_detail, name='blog'),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
