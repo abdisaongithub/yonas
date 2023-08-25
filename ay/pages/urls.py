@@ -5,7 +5,7 @@ from ay import settings
 
 urlpatterns = [
     path('', home_page, name='home'),
-    path('posts/', BlogView.as_view(), name='blogs'),
+    # path('posts/', BlogView.as_view(), name='blogs'),
     path('posts/<int:pk>', blog_detail, name='blog'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

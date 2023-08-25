@@ -21,4 +21,4 @@ def blog_detail(request, pk):
     post = Blog.objects.translated(pk=pk).first()
     items = list(Blog.objects.translated())
     posts = random.sample(items, 4)
-    return render(request, 'pages/post.html', {'post': post, 'posts': posts})
+    return render(request, 'pages/blog.html', {'post': post, 'posts': posts})

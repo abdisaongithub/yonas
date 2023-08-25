@@ -1,6 +1,8 @@
 {% extends 'pages/base.html' %}
 
 {% load static %}
+{% load i18n %}
+{% load humanize %}
 
 {% block content %}
     <!-- blog -->
@@ -18,23 +20,21 @@
             <div class="row d_flex">
                 <div class=" col-md-10 offset-md-1">
                     <div class="blog_post text_align_center">
-                        <figure><img alt="#" src="{% static 'pages/images/blog.jpg' %}"/></figure>
+                        <figure><img alt="#" src="{{ post.image.url }}"/></figure>
                         <h4></h4>
                         <div class="facil">
 {#                            <h3>{{ object.title }}</h3>#}
                             <br>
-                            <strong><span>Post By : Yonas Y. </span><span>{{ object.created_at }}</span></strong>
-{#                            <h3>Changing your car's oil is one of the most important things you can do to keep it#}
-{#                                running#}
-{#                                smoothly</h3>#}
+                            <strong><span>Post By : Miltotech. </span><span>{{ post.createdAt|naturaltime }}</span></strong>
+                            <h3>{{ post.title  }}</h3>
 {#                            It's also one of the easiest things to do yourself, and it can save you a lot of#}
 {#                            money in the long run.#}
 {#                            <br>#}
-{#                            Here's a step-by-step guide on how to change your car's oil without needing a mechanic:#}
+                            {{ post.description }}
                             <br>
                             <br>
                             <div class="container">
-                                {{ object.texts }}
+                                {{ post.content|safe }}
                             </div>
 
 
