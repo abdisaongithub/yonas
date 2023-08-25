@@ -6,9 +6,11 @@ from parler.models import TranslatableModel, TranslatedFields
 class Blog(TranslatableModel):
     translations = TranslatedFields(
         title=models.CharField(max_length=255),
-        descricption=models.CharField(max_length=255, default=''),
+        description=models.CharField(max_length=255, default=''),
         image=models.ImageField(upload_to='posts', blank=True, ),
-        content=RichTextUploadingField(default='')
+        content=RichTextUploadingField(default=''),
+        createdAt=models.DateTimeField(auto_now_add=True),
+        updatedAt=models.DateTimeField(auto_now=True)
     )
 
     def __str__(self):

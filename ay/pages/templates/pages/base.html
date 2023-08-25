@@ -54,21 +54,33 @@
         <div class="row d_flex">
             <div class=" col-md-3 col-sm-3">
                 <div class="logo">
-                    <a href="{% url 'home' %}"><img style="height: 90px; margin-left: 30px;"
-                                                    src="{% static 'pages/images/logo.png' %}" alt="#"/></a>
+                    <a
+                            href="{% url 'home' %}"
+                    >
+                        <img
+                                style="height: 90px; margin-left: 30px;"
+                                src="{% static 'pages/images/logo.png' %}" alt="#"
+                        />
+                    </a>
                 </div>
             </div>
             <div class="col-md-7 di_none">
                 <ul class="Informa_conta">
-                    <li><a href="tel:+251926795815"><i class="fa fa-phone" aria-hidden="true"></i>{% trans 'Call Now' %}
-                        +251 92 679
-                        5815</a>
-                    </li>
-                    <li><a href="https://goo.gl/maps/oHDNZ9dtM6bcvqbR7" target="_blank"> <i class="fa fa-map-marker"
-                                                                                            aria-hidden="true"></i>
-                        {% trans 'Location' %}</a></li>
-                    <li><a href="https://t.me/abd_dba" target="_blank"> <i class="fa fa-telegram" aria-hidden="true">
-                    </i>{% trans 'Join Us On Telegram' %}</a></li>
+                    {#                                        <li><a href="tel:+251926795815"><i class="fa fa-phone" aria-hidden="true"></i>{% trans 'Call Now' %}#}
+                    {#                                            +251 92 679#}
+                    {#                                            5815</a>#}
+                    {#                                        </li>#}
+                    {#                    <li>#}
+                    {#                        <a href="https://goo.gl/maps/oHDNZ9dtM6bcvqbR7" target="_blank">#}
+                    {#                            <i class="fa fa-map-marker" aria-hidden="true"></i>#}
+                    {#                            {% trans 'Location' %}#}
+                    {#                        </a>#}
+                    {#                    </li>#}
+                    {#                    <li>#}
+                    {#                        <a href="https://t.me/abd_dba" target="_blank">#}
+                    {#                            <i class="fa fa-telegram" aria-hidden="true">#}
+                    {#                            </i>{% trans 'Join Us On Telegram' %}</a>#}
+                    {#                    </li>#}
                     {#            <li>#}
                     {#              <a href="#" >#}
                     {#                  <div style="">#}
@@ -83,26 +95,26 @@
                     {#                </i>#}
                     {#                </a>#}
                     {#            </li>#}
-                    <li>
-                        {% get_current_language as CURRENT_LANGUAGE %}
-                        {% get_available_languages as AVAILABLE_LANGUAGES %}
-                        {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
-                        <div class="">
-                            <ul class="">
-                                {% for language in languages %}
-                                    <li>
-                                        <a href="/{{ language.code }}/"
-                                                {% if language.code == CURRENT_LANGUAGE %}
-                                           class="active"{% endif %}>
-                                            {{ language.name_local }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                    </li>
+
+                    <li class="ml-auto"></li>
+
+                    {% get_current_language as CURRENT_LANGUAGE %}
+                    {% get_available_languages as AVAILABLE_LANGUAGES %}
+                    {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+
+                    {% for language in languages %}
+                        <li class="mx-1">
+                            <a href="/{{ language.code }}/"
+                                    {% if language.code == CURRENT_LANGUAGE %}
+                               class="active"{% endif %}>
+                                {{ language.name_local }}
+                            </a>
+                        </li>
+                    {% endfor %}
+
                 </ul>
             </div>
+
             <div class="col-xl-2 col-md-9 col-sm-9">
                 <ul class="email text_align_right">
                     <!-- <li><a href="javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
@@ -174,15 +186,17 @@
                 </div>
                 <div class="col-lg-12 col-md-12">
                     <ul class="top_infomation" style="align-items: center;">
-                        <li><a href="tel:+251926795815"><i class="fa fa-phone"
-                                                           aria-hidden="true"></i>{% trans 'Call Now' %} +251 92
-                            679
-                            5815</a></li>
                         <li>
-                            <a href="https://t.me/abd_dba" target="_blank"> <i class="fa fa-telegram"
+                            <a
+                                    href="tel:+251926795815">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                {% trans 'Call Now' %} +251 913 65 4294</a></li>
+                        <li>
+                            <a href="https://t.me/#" target="_blank"> <i class="fa fa-telegram"
                                                                                aria-hidden="true">
                             </i>
-                                {% trans 'Join Us On Telegram' %}</a>
+                                {% trans 'Join Us On Telegram' %}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -193,7 +207,8 @@
                 <div class="row ">
                     <div class="col-md-3"></div>
                     <div class="col-md-6" style="display: flex; justify-content: center;">
-                        <p>{% trans '2023 All Rights Reserved © ' %}<a href="https://miltotech.com">{% trans 'Powered By Milto Technologies' %}</a>
+                        <p>{% trans '2023 All Rights Reserved © ' %}<a
+                                href="https://miltotech.com">{% trans 'Powered By Milto Technologies' %}</a>
                         </p>
                     </div>
                     <div class="col-md-3"></div>

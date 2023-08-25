@@ -1,3 +1,5 @@
+import random
+
 from django.shortcuts import render
 from django.views import generic
 
@@ -5,8 +7,9 @@ from .models import Blog
 
 
 def home_page(request):
-    posts = Blog.objects.all()
-    return render(template_name='pages/index.html', context={posts: posts}, request=request)
+    items = list(Blog.objects.translated())
+    posts = random.sample(items, 2)
+    return render(template_name='pages/index.html', context={'posts': posts}, request=request)
 
 
 class BlogView(generic.ListView):
@@ -16,4 +19,6 @@ class BlogView(generic.ListView):
 
 def blog_detail(request, pk):
     post = Blog.objects.translated(pk=pk).first()
-    return render(request, 'pages/post.html', {'post': post})
+    items = list(Blog.objects.translated())
+    posts = random.sample(items, 4)
+    return render(request, 'pages/post.html', {'post': post, 'posts': posts})

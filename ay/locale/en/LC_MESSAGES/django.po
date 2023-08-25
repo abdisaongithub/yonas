@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-19 23:20+0300\n"
+"POT-Creation-Date: 2023-08-24 19:37+0000\n"
 "PO-Revision-Date: 2023-06-19 18:41+0000\n"
 "Last-Translator:   <abdtsegaye@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
-#: ay/settings.py:135
+#: ay/settings.py:137
 msgid "English"
 msgstr "English"
 
-#: ay/settings.py:138
+#: ay/settings.py:140
 msgid "Afan Oromo"
 msgstr "Afaan Oromoo"
 
-#: ay/settings.py:139
+#: ay/settings.py:141
 msgid "Amharic"
 msgstr "አማርኛ"
 
@@ -83,7 +83,8 @@ msgstr ""
 msgid "Road Safety"
 msgstr ""
 
-#: pages/templates/pages/index.html:33
+#: pages/templates/pages/index.html:33 pages/templates/pages/index.html:120
+#: pages/templates/pages/index.html:134 pages/templates/pages/index.html:147
 msgid "Driving Tips"
 msgstr ""
 
@@ -91,10 +92,42 @@ msgstr ""
 msgid "Maintenance"
 msgstr ""
 
-#: pages/templates/pages/index.html:36
+#: pages/templates/pages/index.html:36 pages/templates/pages/index.html:262
 msgid "Contact Us"
 msgstr ""
 
-#: pages/templates/pages/index.html:37
+#: pages/templates/pages/index.html:37 pages/templates/pages/index.html:127
 msgid "Read More"
+msgstr ""
+
+#: pages/templates/pages/index.html:111
+msgid "What We Provide"
+msgstr ""
+
+#: pages/templates/pages/index.html:169
+msgid "Posts that might interest you"
+msgstr ""
+
+#: pages/templates/pages/index.html:247
+msgid "Previous"
+msgstr ""
+
+#: pages/templates/pages/index.html:251
+msgid "Next"
+msgstr ""
+
+#: pages/templates/pages/index.html:272
+msgid "Name"
+msgstr ""
+
+#: pages/templates/pages/index.html:275
+msgid "Phone number"
+msgstr ""
+
+#: pages/templates/pages/index.html:278
+msgid "Message"
+msgstr ""
+
+#: pages/templates/pages/index.html:281
+msgid "Send"
 msgstr ""
