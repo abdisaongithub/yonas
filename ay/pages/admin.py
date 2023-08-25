@@ -1,9 +1,7 @@
 from django.contrib import admin
-from .models import Testimonial, Requirement, Contact, About, Blog, Course
+from parler.admin import TranslatableAdmin
 
-admin.site.register(Testimonial,)
-admin.site.register(Requirement)
-admin.site.register(Contact)
-admin.site.register(About)
-admin.site.register(Blog)
-admin.site.register(Course)
+from .models import Blog
+
+# Register your models here.
+admin.site.register(Blog, TranslatableAdmin)

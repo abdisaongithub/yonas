@@ -1,168 +1,53 @@
 {% extends 'pages/base.html' %}
 
 {% load static %}
+{% load i18n %}
+{% load humanize %}
 
 {% block content %}
-<!-- blog -->
-<div class="blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage text_align_center ">
-                    <h2>
-                        <!--                        <img src="{% static 'pages/images/heading.png' %}" alt="#"/>-->
-                        From Our Latest Blogs</h2>
+    <!-- blog -->
+    <div class="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center ">
+                        <h2>
+{#                            <img src="{% static 'pages/images/heading.png' %}" alt="#"/>#}
+                            {{ object.related.related_model }}</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row d_flex">
-            <div class=" col-md-10 offset-md-1">
-                <div class="blog_post text_align_center">
-                    <figure><img alt="#" src="{% static 'pages/images/blog.jpg' %}"/></figure>
-                    <h4></h4>
-                    <div class="facil">
-                        <h3>Changing your oil</h3>
-                        <strong><span>Post By : Auto Repair </span><span>February 12, 2023</span></strong>
-                        <h3>Changing your car's oil is one of the most important things you can do to keep it running
-                            smoothly</h3>
-                        It's also one of the easiest things to do yourself, and it can save you a lot of
-                        money in the long run.
-                        <br>
-                        Here's a step-by-step guide on how to change your car's oil without needing a mechanic:
-                        <br>
-                        <br>
-                        <div class="container">
-                            <ul class="">
-                                <li>
-                                <span class="float-left">
-                                        <span class="pull-left" style="font-weight: bold;">Gather your supplies.</span>
-                                    You'll need a new oil filter, new oil, a drain pan, a wrench or
-                                    socket, and a funnel. You may also want to wear gloves and safety glasses to protect
-                                    yourself from the oil.
-                                </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Locate the oil drain plug</span>
-                                The oil drain plug is usually located on the bottom of the
-                            engine. It's a large bolt with a washer on it
-                            </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Place the drain pan under the drain plug</span>
-                                 Be careful not to spill any oil.
-                            </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Use the wrench or socket to loosen the drain plug</span>
-                                 Once the plug is loose, remove it by hand
-                            and let the oil drain into the pan.
-                            </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Replace the drain plug</span>
-                                 Once the oil has drained, tighten the drain plug with the wrench or
-                            socket
-                            </span>
-                                </li>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Locate the oil filter</span>
-                                 The oil filter is usually located on top of the engine. It's a large
-                            metal canister with a rubber gasket on the bottom
-                            </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Use the wrench or socket to loosen the oil filter</span>
-                                 Once the filter is loose, remove it by
-                            hand
-                            </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Apply a thin coat of new oil to the gasket of the new oil filter</span>
-                                 This will help create a
-                            seal and prevent leaks
-                            </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Screw on the new oil filter by hand</span>
-                                 Don't over-tighten it, or you could damage the filter
-                            </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Add new oil to the engine</span>
-                                 The amount of oil you need will depend on your car's make and
-                            model. Check your owner's manual for the correct amount
-                            </span>
-                                </li>
+            <div class="row d_flex">
+                <div class=" col-md-10 offset-md-1">
+                    <div class="blog_post text_align_center">
+                        <figure><img alt="#" src="{{ post.image.url }}"/></figure>
+                        <h4></h4>
+                        <div class="facil">
+{#                            <h3>{{ object.title }}</h3>#}
+                            <br>
+                            <strong><span>Post By : Miltotech. </span><span>{{ post.createdAt|naturaltime }}</span></strong>
+                            <h3>{{ post.title  }}</h3>
+{#                            It's also one of the easiest things to do yourself, and it can save you a lot of#}
+{#                            money in the long run.#}
+{#                            <br>#}
+                            {{ post.description }}
+                            <br>
+                            <br>
+                            <div class="container">
+                                {{ post.content|safe }}
+                            </div>
 
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Replace the oil cap</span>
-                                remove any air bubbles
 
-                            </span>
-                                </li>
-                                <br>
-                                <br>
-
-                                <li>
-                                    <span class="float-left">
-                                        <span style="font-weight: bold;">
-                                            Start the engine and let it run for a few minutes</span>
-                                        This will circulate the new oil and help
-                                    </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Check the dipstick</span>
-                                The dipstick is usually located on the side of the engine. Pull it out
-                            and wipe it clean with a rag. Then, insert it back into the engine and check the oil level.
-                            The oil level should be between the "full" and "add" marks
-                            </span>
-                                </li>
-                                <br>
-                                <li>
-                                <span class="float-left">
-                                <span style="font-weight: bold;">Dispose of the old oil and filter properly</span>
-                                You can take them to a local auto parts store or
-                            recycling center
-                            </span>
-                                </li>
-                            </ul>
+{#                            <span style="font-weight: bold; font-size: 32px;">#}
+{#                            That's it! You've now successfully changed your car's oil without needing a mechanic.#}
+{#                            Congratulations!#}
+{#                        </span>#}
+                            <!--                        <a class="read_more" href="blog.html">Read More</a>-->
                         </div>
-                        <br>
-                        <br>
-                        <br>
-                        </p>
-
-                        <span style="font-weight: bold; font-size: 32px;">
-                            That's it! You've now successfully changed your car's oil without needing a mechanic.
-                            Congratulations!
-                        </span>
-                        <!--                        <a class="read_more" href="blog.html">Read More</a>-->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- end blog -->
+    <!-- end blog -->
 {% endblock content %}

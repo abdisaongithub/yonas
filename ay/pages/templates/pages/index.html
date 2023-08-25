@@ -1,302 +1,311 @@
 {% extends 'pages/base.html' %}
+{% load i18n %}
 {% load static %}
 
 {% block content %}
-<div class="full_bg">
-    <div class="container_width">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="ser_img">
-            <figure><img style="width: 500px; margin-top: 80px;" src="{% static 'pages/images/driver.png' %}" alt="#" /></figure>
-          </div>
+    <div class="full_bg">
+        <div class="container_width">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="ser_img">
+                        <figure><img style="width: 500px; margin-top: 80px;"
+                                     src="{% static 'pages/images/driver.png' %}" alt="#"/></figure>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <!-- carousel code -->
+                    <div id="banner1" class="carousel slide slider_main">
+                        <ol class="carousel-indicators">
+                            <li data-target="#banner1" data-slide-to="0" class="active">q</li>
+                            <li data-target="#banner1" data-slide-to="1">q</li>
+                            <li data-target="#banner1" data-slide-to="2">q</li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <!-- first slide -->
+                            <div class="carousel-item active">
+                                <div class="container">
+                                    <div class="carousel-caption relative">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="creative">
+                                                    <div class="auto_text">
+                                                        <h1 style="font-size: 72px; letter-spacing: 0;">{% trans 'Road Safety' %},
+                                                            <br>{% trans 'Driving Tips' %},
+                                                            <br>{% trans 'Maintenance' %}</h1>
+                                                        <!--                                                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum </p>-->
+                                                        <a class="read_more" href="javascript:void(0)">{% trans 'Contact Us' %}</a>
+                                                        <a class="read_more" href="javascript:void(0)">{% trans 'Read More' %}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- second slide -->
+                            <!-- <div class="carousel-item">
+                              <div class="container">
+                                <div class="carousel-caption relative">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div class="creative">
+                                        <div class="auto_text">
+                                          <h1>AUTO <br>SERVICES</h1>
+                                          <p>It is a long established fact that a reader will be distracted by the readable content of
+                                            a page when looking at its layout. The point of using Lorem Ipsum </p>
+                                          <a class="read_more" href="javascript:void(0)">Contact Us</a>
+                                          <a class="read_more" href="javascript:void(0)">Read More</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- third slide-->
+                            <!--
+                            <div class="carousel-item">
+                              <div class="container">
+                                <div class="carousel-caption relative">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <div class="creative">
+                                        <div class="auto_text">
+                                          <h1>AUTO <br>SERVICES</h1>
+                                          <p>It is a long established fact that a reader will be distracted by the readable content of
+                                            a page when looking at its layout. The point of using Lorem Ipsum </p>
+                                          <a class="read_more" href="javascript:void(0)">Contact Us</a>
+                                          <a class="read_more" href="javascript:void(0)">Read More</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            -->
+                        </div>
+                        <!-- controls -->
+                        <!-- <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+                          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+                          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                          <span class="sr-only">Next</span>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-7">
-          <!-- carousel code -->
-          <div id="banner1" class="carousel slide slider_main">
+    </div>
+    <!-- end banner -->
+
+    <!-- services -->
+    <div class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_left">
+                        <h2><img src="{% static 'pages/images/driving_wheel.png' %}" style="width: 80px;" alt="#"/>
+                            {% trans 'What We Provide' %}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div id="ho_heal" class="our_class text_align_center">
+                        <i class="d_no"><img src="{% static 'pages/images/suv.png' %}" alt="#"/></i>
+                        <i class="d_bo"><img src="{% static 'pages/images/suv.png' %}" alt="#"/></i>
+                        <h3>{% trans 'Driving Tips' %}</h3>
+                        <strong>Requirements</strong>
+                        <p>
+                            - suscipit laudem invidunt delectus elementum
+                            <br>
+                            - suscipit laudem invidunt delectus elementum
+                        </p>
+                        <a class="read_more" href="javascript:void(0)">{% trans 'Read More' %}</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mar_top90">
+                    <div id="ho_heal" class="our_class text_align_center">
+                        <i class="d_no"><img src="{% static 'pages/images/public_1.png' %}" alt="#"/></i>
+                        <i class="d_bo"><img src="{% static 'pages/images/public_1.png' %}" alt="#"/></i>
+                        <h3>{% trans 'Driving Tips' %}</h3>
+                        <strong>Requirements</strong>
+                        <p>
+                            - suscipit laudem invidunt delectus elementum
+                            <br>
+                            - suscipit laudem invidunt delectus elementum
+                        </p><a class="read_more" href="javascript:void(0)">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div id="ho_heal" class="our_class text_align_center">
+                        <i class="d_no"><img src="{% static 'pages/images/cargo_1.png' %}" alt="#"/></i>
+                        <i class="d_bo"><img src="{% static 'pages/images/cargo_1.png' %}" alt="#"/></i>
+                        <h3>{% trans 'Driving Tips' %}</h3>
+                        <strong>Requirements</strong>
+                        <p>
+                            - suscipit laudem invidunt delectus elementum
+                            <br>
+                            - suscipit laudem invidunt delectus elementum
+                        </p><a class="read_more" href="javascript:void(0)">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end services -->
+
+    <div class="customers">
+        <div class="clients_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="titlepage text_align_center">
+                            <h2>
+                                <!-- <img src="images/heading.png" alt="#"/> -->
+                                {% trans 'Posts that might interest you' %}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start slider section -->
+        <div id="myCarousel" class="carousel slide clients_banner" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li data-target="#banner1" data-slide-to="0" class="active">q</li>
-              <li data-target="#banner1" data-slide-to="1">q</li>
-              <li data-target="#banner1" data-slide-to="2">q</li>
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-              <!-- first slide -->
-              <div class="carousel-item active">
-                <div class="container">
-                  <div class="carousel-caption relative">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="creative">
-                          <div class="auto_text">
-                            <h1 style="font-size: 72px; letter-spacing: 0;">Road Safety,<br>Driving Tips,<br>Maintenance</h1>
-<!--                                                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum </p>-->
-                            <a class="read_more" href="javascript:void(0)">Contact Us</a>
-                            <a class="read_more" href="javascript:void(0)">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- second slide -->
-              <!-- <div class="carousel-item">
-                <div class="container">
-                  <div class="carousel-caption relative">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="creative">
-                          <div class="auto_text">
-                            <h1>AUTO <br>SERVICES</h1>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of
-                              a page when looking at its layout. The point of using Lorem Ipsum </p>
-                            <a class="read_more" href="javascript:void(0)">Contact Us</a>
-                            <a class="read_more" href="javascript:void(0)">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- third slide-->
-              <!--
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="carousel-caption relative">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="creative">
-                          <div class="auto_text">
-                            <h1>AUTO <br>SERVICES</h1>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of
-                              a page when looking at its layout. The point of using Lorem Ipsum </p>
-                            <a class="read_more" href="javascript:void(0)">Contact Us</a>
-                            <a class="read_more" href="javascript:void(0)">Read More</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              -->
-            </div>
-            <!-- controls -->
-            <!-- <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-              <span class="sr-only">Next</span>
-            </a> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end banner -->
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="carousel-caption tetxs">
+                            <div class="row d_flex">
 
-<!-- services -->
-  <div class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="titlepage text_align_left">
-            <h2><img src="{% static 'pages/images/driving_wheel.png' %}" style="width: 80px;" alt="#" />What We Provide</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div id="ho_heal" class="our_class text_align_center">
-            <i class="d_no"><img src="{% static 'pages/images/suv.png' %}" alt="#" /></i>
-            <i class="d_bo"><img src="{% static 'pages/images/suv.png' %}" alt="#" /></i>
-            <h3>Driving Tips</h3>
-            <strong>Requirements</strong>
-            <p>
-              - suscipit laudem invidunt delectus elementum
-              <br>
-              - suscipit laudem invidunt delectus elementum
-            </p>
-            <a class="read_more" href="javascript:void(0)">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mar_top90">
-          <div id="ho_heal" class="our_class text_align_center">
-            <i class="d_no"><img src="{% static 'pages/images/public_1.png' %}" alt="#" /></i>
-            <i class="d_bo"><img src="{% static 'pages/images/public_1.png' %}" alt="#" /></i>
-            <h3>Driving Tips</h3>
-            <strong>Requirements</strong>
-            <p>
-              - suscipit laudem invidunt delectus elementum
-              <br>
-              - suscipit laudem invidunt delectus elementum
-            </p><a class="read_more" href="javascript:void(0)">Read More</a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div id="ho_heal" class="our_class text_align_center">
-            <i class="d_no"><img src="{% static 'pages/images/cargo_1.png' %}" alt="#" /></i>
-            <i class="d_bo"><img src="{% static 'pages/images/cargo_1.png' %}" alt="#" /></i>
-            <h3>Maintenance Tips</h3>
-            <strong>Requirements</strong>
-            <p>
-              - suscipit laudem invidunt delectus elementum
-              <br>
-              - suscipit laudem invidunt delectus elementum
-            </p><a class="read_more" href="javascript:void(0)">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end services -->
+                                {% for post in posts %}
+                                <div class="col-md-6">
+                                    <div class="custom">
+                                        <div class="clint">
+                                            <i><img src="{{ post.image.url }}" style="height: 80px;" alt="#"/></i>
+                                            <h4>{{ post.title }}</h4>
+                                        </div>
+                                        <p>
+                                            {{ post.description }}
+                                        </p>
+                                    </div>
+                                </div>
+                                {% endfor %}
 
-<div class="customers">
-    <div class="clients_bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="titlepage text_align_center">
-              <h2>
-                <!-- <img src="images/heading.png" alt="#"/> -->
-                What our partners say
-              </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+{#                <div class="carousel-item">#}
+{#                    <div class="container">#}
+{#                        <div class="carousel-caption tetxs">#}
+{#                            <div class="row d_flex">#}
+{##}
+{#                                <div class="col-md-6">#}
+{#                                    <div class="custom">#}
+{#                                        <div class="clint">#}
+{#                                            <i><img src="{% static 'pages/images/clint2.png' %}" alt="#"/></i>#}
+{#                                            <h4>Mikiyas Yonas</h4>#}
+{#                                        </div>#}
+{#                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod#}
+{#                                            tempor incididunt ut#}
+{#                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{##}
+{#                                <div class="col-md-6">#}
+{#                                    <div class="custom">#}
+{#                                        <div class="clint">#}
+{#                                            <i><img src="{% static 'pages/images/clint1.png' %}" alt="#"/></i>#}
+{#                                            <h4>Nebyu Adem</h4>#}
+{#                                        </div>#}
+{#                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod#}
+{#                                            tempor incididunt ut#}
+{#                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{##}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
             </div>
-          </div>
+{#            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">#}
+{#                <i class="fa fa-angle-left" aria-hidden="true"></i>#}
+{#                <span class="sr-only">{% trans 'Previous' %}</span>#}
+{#            </a>#}
+{#            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">#}
+{#                <i class="fa fa-angle-right" aria-hidden="true"></i>#}
+{#                <span class="sr-only">{% trans 'Next' %}</span>#}
+{#            </a>#}
         </div>
-      </div>
     </div>
-    <!-- start slider section -->
-    <div id="myCarousel" class="carousel slide clients_banner" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="carousel-caption tetxs">
-              <div class="row d_flex">
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint2.png' %}" alt="#" /></i>
-                      <h4>Abdisa Tsegaye</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint1.png' %}" alt="#" /></i>
-                      <h4>Daniel Muleta</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="carousel-caption tetxs">
-              <div class="row d_flex">
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint2.png' %}" alt="#" /></i>
-                      <h4>Mikiyas Yonas</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="custom">
-                    <div class="clint">
-                      <i><img src="{% static 'pages/images/clint1.png' %}" alt="#" /></i>
-                      <h4>Nebyu Adem</h4>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <i class="fa fa-angle-left" aria-hidden="true"></i>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <i class="fa fa-angle-right" aria-hidden="true"></i>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-  <!-- end customers -->
-  <!-- contact -->
-  <div class="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 ">
-          <div class="titlepage">
-            <h2><i class="fa fa-phone" style="margin-right: 10px; color: green;" alt="#"></i> Contact Us</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row d_flex">
-        <div class="col-md-6">
-          <form id="request" class="main_form">
+    <!-- end customers -->
+    <!-- contact -->
+    <div class="contact">
+        <div class="container">
             <div class="row">
-              <div class="col-md-12">
-                <input class="form_control" placeholder="Name" type="type" name=" Name">
-              </div>
-              <div class="col-md-12">
-                <input class="form_control" placeholder="Phone number" type="type" name="Phone Number">
-              </div>
-              <div class="col-md-12">
-                <input class="form_cont" placeholder="Message" type="type" name="message">
-              </div>
-              <div class="col-md-12">
-                <button class="send_btn">Send</button>
-              </div>
+                <div class="col-md-12 ">
+                    <div class="titlepage">
+                        <h2><i class="fa fa-phone" style="margin-right: 10px; color: green;" alt="#"></i> {% trans 'Contact Us' %}
+                        </h2>
+                    </div>
+                </div>
             </div>
-          </form>
+            <div class="row d_flex">
+                <div class="col-md-6">
+                    <form id="request" class="main_form" method="post">
+                        {% csrf_token %}
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input class="form_control" placeholder="{% trans 'Name' %}" type="type" name="Name">
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form_control" placeholder="{% trans 'Phone number' %}" type="type" name="Phone Number">
+                            </div>
+                            <div class="col-md-12">
+                                <input class="form_cont" placeholder="{% trans 'Message' %}" type="type" name="message">
+                            </div>
+                            <div class="col-md-12">
+                                <button class="send_btn">{% trans 'Send' %}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="cont_img">
+                        <figure><img src="{% static 'pages/images/contact.png' %}" alt="#"/></figure>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-          <div class="cont_img">
-            <figure><img src="{% static 'pages/images/contact.png' %}" alt="#" /></figure>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- end contact -->
+    <!-- end contact -->
 
 
 
-  <div class="container-fliud">
-    <div class="row">
-      <div class="col-md-12 padd0">
-        <div class="map-responsive">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1439.1579294889866!2d38.6903479738304!3d8.951314078242557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2set!4v1650882878317!5m2!1sen!2set"
-            width="1360" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="container-fliud">
+        <div class="row">
+            <div class="col-md-12 padd0">
+                <div class="map-responsive">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1439.1579294889866!2d38.6903479738304!3d8.951314078242557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2set!4v1650882878317!5m2!1sen!2set"
+                            width="1360" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
 
 {% endblock content %}
