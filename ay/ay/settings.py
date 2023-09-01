@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-95xvly4@@2oh61http+k7w2njl%++z6f=!t^&g0k_+m-alh$9n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['46.101.28.78', 'shufer.et', 'localhost', '127.0.0.1']
 
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     # 3rd party apps
-    'django_extensions',
+    # 'django_extensions',
     'rosetta',
     'parler',
     'ckeditor',
@@ -176,10 +176,12 @@ LOCALE_PATHS = [
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/var/www/html/shufer.et/static/'
+# STATIC_ROOT = '/var/www/html/shufer.et/static/'
+STATIC_ROOT = 'static/'
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = '/var/www/html/shufer.et/media/'
+# MEDIA_ROOT = '/var/www/html/shufer.et/media/'
+MEDIA_ROOT = 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -258,4 +260,5 @@ CKEDITOR_CONFIGS = {
 }
 
 # ckeditor upload path
-CKEDITOR_UPLOAD_PATH = "uploads/"
+# CKEDITOR_UPLOAD_PATH = '/var/www/html/shufer.et/uploads/'
+CKEDITOR_UPLOAD_PATH = 'uploads/'
